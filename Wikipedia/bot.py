@@ -37,7 +37,7 @@ async def start_command(message:Message):
         await message.answer(text="Assalomu alaykum,Wiki botga xush kelibsiz so'z yozing!!!")
 
 
-@dp.message(Command("count"))
+@dp.message(Command("about"))
 async def start_command(message:Message):
     full_name = message.from_user.full_name
     telegram_id = message.from_user.id
@@ -45,7 +45,7 @@ async def start_command(message:Message):
         db.add_user(full_name=full_name,telegram_id=telegram_id)
         await message.answer(text="")
     except:
-        await message.answer(text="Assalomu alaykum bu SIFAT o'quv markazi o'quvchisi Abdinabiyev yaratgan.")
+        await message.answer(text="Bu SIFAT o'quv markazi o'quvchisi Abdinabiyev Sardor yaratgan.")
 
 
 
